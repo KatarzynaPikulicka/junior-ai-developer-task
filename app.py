@@ -17,14 +17,14 @@ def fetch_article_from_url(url):
 def generate_html(article_text):
 
     prompt = f"""
-  Please generate HTML code for an article that meets the following requirements: 
-  Use appropriate HTML tags to structure the content (e.g., <h1>, <h2>, <p>, <ul>, <ol>, etc.). 
-  Specify where images should be inserted using the <img> tag with the attribute src="image_placeholder.jpg". 
-  Add an alt attribute to each image with a detailed description (prompt) that can be used to generate the image. 
-  Include captions for the images using an appropriate HTML tag (e.g., <figcaption>). Do not use CSS or JavaScript. 
-  Respond without wrapping the code in markdown syntax.
-  The generated code should include only the content between the <body> and </body> tags. Omit the <html>, <head>, and <body> tags.
-. 
+    Please generate HTML code for an article that meets the following requirements: 
+    Use appropriate HTML tags to structure the content (e.g., <h1>, <h2>, <p>, <ul>, <ol>, etc.). 
+    Specify where images should be inserted using the <img> tag with the attribute src="image_placeholder.jpg". 
+    Add an alt attribute to each image with a detailed description (prompt) that can be used to generate the image. 
+    Include captions for the images using an appropriate HTML tag (e.g., <figcaption>). Do not use CSS or JavaScript. 
+    The generated code should include only the content between the <body> and </body> tags. 
+  
+    Omit the <html>, <head>, and <body> tags.
 
     Content of the article to be transformed:
     {article_text}
@@ -32,9 +32,9 @@ def generate_html(article_text):
 
     try:
         response = client.chat.completions.create(
-            model="gpt-4o-mini",
+            model="gpt-4o",
             messages=[
-                {"role": "system", "content": "You are a helpful assistant that converts text to HTML."},
+                {"role": "system", "content": "You are a helpful assistant that converts text to HTML. Respond without wrapping the code in markdown syntax."},
                 {"role": "user", "content": prompt},
             ],
             max_tokens=3000,
