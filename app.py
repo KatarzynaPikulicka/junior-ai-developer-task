@@ -22,6 +22,7 @@ def generate_html(article_text):
   Specify where images should be inserted using the <img> tag with the attribute src="image_placeholder.jpg". 
   Add an alt attribute to each image with a detailed description (prompt) that can be used to generate the image. 
   Include captions for the images using an appropriate HTML tag (e.g., <figcaption>). Do not use CSS or JavaScript. 
+  Respond without wrapping the code in markdown syntax.
   The generated code should include only the content between the <body> and </body> tags. Omit the <html>, <head>, and <body> tags.
 . 
 
