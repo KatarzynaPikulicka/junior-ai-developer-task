@@ -7,8 +7,8 @@ Prosty skrypt w Pythonie do pobierania artykułu z predefiniowanego URL, generow
 - Pobieranie tekstu artykułu z zdefiniowanego URL 🌐
 - Konwersja artykułu na HTML z użyciem OpenAI 🤖
 - Zapisywanie wygenerowanego HTML do pliku 🖇️
+- (zadanie dla chętnych) wyświetlanie wygenerowanego artykułu z użyciem szablonu 📄✨
 
----
 
 ## 🚀 Jak zacząć?
 
@@ -37,21 +37,18 @@ Skrypt działa na zdefiniowanym URL w zmiennej `article_url`. Wystarczy uruchomi
 python app.py
 ```
 
----
 
 ## Przykład użycia 🛠️
 
 - **Wejście**: Zdefiniowany w kodzie URL artykułu
 - **Wyjście**: Plik `artykul.html` zawierający sformatowaną treść w HTML.
 
----
 
 ## Możliwe błędy ⚠️
 
 - **Problemy z siecią**: Upewnij się, że URL w zmiennej `article_url` jest poprawny i dostępny.
 - **Brak klucza API**: Sprawdź, czy `OPENAI_API_KEY` jest ustawiony i poprawny.
 
----
 
 ## Autor 🧑‍💻
 
